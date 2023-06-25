@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Twitter</title>
+</head>
+<body>
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+      <div class="bg-white rounded-lg p-6 md:w-[60%] ">
+          <!-- Close button -->
+          <button id="closeButton" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 focus:outline-none">
+          </button>
+          <!-- Pop-up content -->
+          <div class="flex-col md:flex">
+            <!-- Profile picture -->
+            <div class="flex justify-center">
+              <img class="w-32 h-32 rounded-full" src="img/programmer.jpeg" alt="Profile Picture">
+            </div>
+
+            <div class="pl-4 text-center">
+              <!-- Name -->
+              <h2 class="text-2xl font-bold">Ahmad Umaru Ba</h2>
+
+              <!-- Job Title -->
+              <h3 class="text-lg text-gray-700">Prompt Engineer</h3>
+
+              <!-- Description -->
+              <p class="text-gray-600 mt-2">A Demon Slayer, Hokage, Pirate King, Soul Reaper, Engineer,
+                 Architect, Programmer, Developer, Data Scientist, and 3D Designer. Combining that with
+                  Prompt-Engineering and the possibilities become endless.</p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popup");
+    const closeButton = document.getElementById("closeButton");
+
+    closeButton.addEventListener("click", function () {
+      popup.style.display = "none";
+    });
+
+    popup.addEventListener("click", function (event) {
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+  });
+</script>
+<!--Main body------------------------------------------------------------------------------------------------------->
+    <section class="flex justify-between w-[100%] ">
+        <!-- nav -->
+        <div  class="hidden md:inline-block md:fixed h-screen md:w-[15%] md:h-screen border border-r-gray-100 lg:w-[25%]">
+            <ul class="flex flex-col  p-9 pt-2 space-y-1.5">
+                <li class="p-2"><a href="index.html"><img src="img/twitter.png" alt=""></a></li>
+                <li class="flex space-x-3 lg:w-[120px] md:w-[50px] p-2 rounded-full  hover:bg-gray-300 md:hover:">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                        <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                      </svg>
+                      <a href="index.html"><h1 class="md:hidden lg:inline-block">Home</h1></a>
+                  </li>
+                  <li class="flex space-x-3 lg:w-[120px] md:w-[50px] p-2 rounded-full hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M11.097 1.515a.75.75 0 01.589.882L10.666 7.5h4.47l1.079-5.397a.75.75 0 111.47.294L16.665 7.5h3.585a.75.75 0 010 1.5h-3.885l-1.2 6h3.585a.75.75 0 010 1.5h-3.885l-1.08 5.397a.75.75 0 11-1.47-.294l1.02-5.103h-4.47l-1.08 5.397a.75.75 0 01-1.47-.294l1.02-5.103H3.75a.75.75 0 110-1.5h3.885l1.2-6H5.25a.75.75 0 010-1.5h3.885l1.08-5.397a.75.75 0 01.882-.588zM10.365 9l-1.2 6h4.47l1.2-6h-4.47z" clip-rule="evenodd" />
+                      </svg>
+                      <a href="#"><h1 class="md:hidden lg:inline-block">Explore</h1></a>
+                  </li>
+                  <li class="flex space-x-3 lg:w-[140px] md:w-[50px] p-2 rounded-full hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                  </svg>
+                  <a href="#"><h1 class="md:hidden lg:inline-block">Notification</h1></a>
+                </li>
+                <li class="flex space-x-3 lg:w-[140px] md:w-[50px] p-2 rounded-full hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                      </svg>
+                      <a href="mailto:aumaruba306@gmail.com"><h1 class="md:hidden lg:inline-block">Message</h1></a>
+                </li>
+                <li class="flex space-x-3 lg:w-[140px] md:w-[50px] p-2 rounded-full hover:bg-gray-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                      </svg>
+                      <a href="https://web.facebook.com/ahmad.umaruba/"><h1 class="md:hidden lg:inline-block">Facebook</h1></a>
+                </li>
+                <li class="flex space-x-3 lg:w-[120px] md:w-[50px]  p-2 rounded-full hover:bg-gray-300">                    
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                      </svg>
+                      <a href="https://www.instagram.com/ahmad_____ba/"><h1 class="md:hidden lg:inline-block">Instagram</h1></a>
+                </li>
+                <li class="flex space-x-3 lg:w-[120px] md:w-[50px] p-2 rounded-full hover:bg-gray-300">                    
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect height="12" width="4" x="2" y="9" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
+                      <a href="https://www.linkedin.com/in/ahmad-umaru-ba-7b17911b4/"><h1 class="md:hidden lg:inline-block">Linked-In</h1></a>
+                </li>
+                <li class="flex space-x-3 lg:w-[120px] md:w-[50px] p-2 rounded-full hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <a href="#"><h1 class="md:hidden lg:inline-block">More</h1></a>
+                </li>
+                <li class=" p-3 bg-blue-400 rounded-full w-150px text-center text-white md:hidden lg:inline-block "><a href="main.html" >Tweet</a></li>
+                <li >
+                    <a href="main.html">
+                        <div class="space-x-5 p-3 mt-4 rounded-full hover:bg-gray-300 md:hidden lg:flex">
+                            <img class="w-[40px] h-[40px] rounded-full" src="img/pic.jpg" alt=""><div class="flex flex-col"><h2 class="text-base">Ahmad Umaru Ba</h2><p class="text-xs text-gray-500"><a href="main.html">@ahmad_____ba</a></p></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                          </svg>
+                        </div>  
+                    </a>               
+                 </li>
+            </ul>
+        </div>
+        <!-- main body------------------------------------------------------ -->
+        <div class="md:ml-[15%] lg:ml-[25%] md:w-[80%] lg:[50%] w-[100%] flex flex-col hover:bg-gray-50">
+            <!-- top -->
+            <div class="w-c[100%] p-3 bg-white flex justify-between">
+                <div class="flex items-center"><img class="w-[70px] h-[50px] rounded-full mr-3 md:hidden" src="img/pic.jpg" alt=""><h2 class="font-bold text-4xl">Home</h2></div>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  </svg>                  
+            </div>
+            <!-- main------------------------------------------------------- -->
+            <!--Tweet --------------------------------------------------------->
+            <div class="flex flex-col p-3 space-y-3">
+            <div class="md:flex items-start space-x-4 hidden">
+              <img class="w-14 h-14 rounded-full" src="img/pic.jpg" alt="">
+              <div class="flex-grow">
+                <textarea id="tweet-text" placeholder="Failure is not an option, Success is all I envision" rows="3" class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-base placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                <div class="flex items-center justify-between mt-2">
+                  <div class="flex items-center space-x-2">
+                    <button id="tweet-button" type="button" class="flex items-center space-x-2 px-3 py-2 bg-blue-500 text-white rounded-md text-sm font-medium">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 11-1.414 1.414L8 11.414l-3.293 3.293a1 1 0 01-1.414-1.414L6.586 10 3.293 6.707a1 1 0 011.414-1.414L8 8.586l3.293-3.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Tweet</span>
+                    </button>
+                    <button id="add-media-button" type="button" class="flex items-center space-x-2 px-3 py-2 bg-gray-200 text-gray-700 rounded-md text-sm font-medium">
+                      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 12a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-1 0a7 7 0 11-14 0 7 7 0 0114 0z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span>Add Media</span>
+                    </button>
+                  </div>
+                  <div class="text-gray-500">
+                    <span id="character-count">140</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="tweet-output"></div>
+
+          <hr>
+
+          <script>
+            // Event listener for the tweet button
+            document.getElementById('tweet-button').addEventListener('click', function() {
+              // Get the tweet text
+              var tweetText = document.getElementById('tweet-text').value;
+              
+              // Create the tweet output
+              var tweetOutput = `
+                <div class="flex justify-between">
+                  <div class="flex">
+                    <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                    <div class="flex flex-col">
+                      <div class="flex">
+                        <h2 class="text-base">Random-user</h2>
+                        <p class="text-base ml-2 text-gray-500">
+                          <a href="main.html" class="text-gray-500">@RandomUser</a>
+                        </p>
+                      </div>
+                      <p class="text-gray-500">Your bio or description</p>
+                    </div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                  </svg>
+                </div>
+                <div class="max-w-[100%] max-h-[90%] px-10">
+                  <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                    ${tweetText}
+                  </p>
+                </div>
+                <hr>
+              `;
+              
+              // Add the tweet output to the tweet-output div
+              document.getElementById('tweet-output').innerHTML += tweetOutput;
+              
+              // Reset the tweet text and character count
+              document.getElementById('tweet-text').value = '';
+              document.getElementById('character-count').textContent = '140';
+            });
+
+            // Event listener for the add media button
+            document.getElementById('add-media-button').addEventListener('click', function() {
+              // TODO: Implement media functionality
+              alert('Add Media functionality not implemented');
+            });
+          </script>
+
+                <!--Content -------------------------------->        
+                    <div class="flex justify-between"><!--Text-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        A Top G is a man of impeccable perspicasity and sheer indefatigability who is a feared opponent in any realm of human endevour.
+                        <br><br> ~Andrew Tate 
+                      </p>
+                    </div>
+                    <hr> <br>               
+                  <div class="flex justify-between"><!--Images-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        This is me, I identify as a TOP-G
+                      </p>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/bossmode.jpg" alt="">
+                    </div>                  
+                    <hr><br>  
+                    <div class="flex justify-between"><!--Front-End-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">Front-End Web Development</h1>
+                        <p>
+                          2017 served as my gateway into the world of programming, sparking my passion for creating
+                          captivating user interfaces and interactive web experiences.
+                          <br>
+                          I relied on YouTube. Two prominent channels that greatly contributed to my 
+                          growth in front-end development were TheNewBoston and TheNetNinja.
+                          <br>
+                          Throughout my journey, I have worked on various projects that showcase my expertise in
+                          front-end development. Some notable examples include building websites for Nobul, cloning Twitter,
+                          LinkedIn and Netflix.
+                          <br>
+                          In 2022, I took my skills a step further by upgrading to Tailwind CSS,
+                          a popular and efficient CSS framework that significantly streamlined my front-end development
+                          workflow.
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/html.jpg" alt="">
+                    </div>                  
+                    <hr><br>
+                    <div class="flex justify-between"><!--Python-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">Python Programming</h1>
+                        <p>
+                          I embarked on my Python programming journey in 2022 during strike,
+                          I utilized valuable learning resources Udemy, Kaggle and YouTube channels 
+                          such as Tech with Tim and Neural Nine, among others.
+                          I have also obtained certificates from Udemy and Kaggle,
+                          which have thought me various libraries and frameworks including Selenium, BeautifulSoup, TKinter, and many others.
+                          <br>
+                          I have applied my Python programming skills to diverse projects, including developing 
+                          a Rock Paper Scissors game, creating a Virtual Assistant, and building Web Scrapers. 
+                          These projects have allowed me to showcase my problem-solving abilities and demonstrate 
+                          the practical applications of Python in various domains.
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/python.jpg" alt="">
+                    </div>                  
+                    <hr> <br>
+                    <div class="flex justify-between"><!--Solidworks-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">SolidWorks</h1>
+                        <p>
+                          I was introduced to Solidworks at NCAIR in 2022, where it was used for 3D printing parts.
+                          However, I took it a step further and secured a job as a reverse engineer at Argotios Bike Showroom.
+                          In my role, I not only reverse engineer car parts but also add a touch of creativity to make them
+                          unique. Some projects I have worked on include 3d design of a Rover Casing, axial flux motor, jet engine,
+                          remote controller and also fabricated car parts among others.
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/3d.jpg" alt="">
+                    </div>                  
+                    <hr><br>
+                    <div class="flex justify-between"><!--Revit-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">AutoDesk Revit</h1>
+                        <p>
+                          A BIM(Building Information Modelling) software. With hands-on experience as an intern at HDwaks Integrated Limited since 2019,
+                          where I gained knowledge in both engineering and architecture through real-life
+                          projects, I have expanded my expertise
+                          in various aspects. In 2022 during strike, I further honed my skills by obtaining a certificate
+                          from Udemy and learning from YouTube channels like Balkan Architect.
+                          <br>
+                          Additionally, I utilize Twinmotion for interior design once I complete the
+                          architectural and structural aspects. This software allows me to bring life
+                          to interior spaces and create captivating visualizations. Moreover,
+                          I am proficient in handling mechanical, electrical, and plumbing aspects within
+                          the Revit platform, ensuring comprehensive and well-integrated designs.
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/revita.jpg" alt="">
+                    </div>                  
+                    <hr><br>
+                    <div class="flex justify-between"><!--Machine learning-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">Machine-Learning, Data Science and Computer-Vision</h1>
+                        <p>
+                          I got Introduced to Machine Learning, Data Science, and Computer Vision
+                          at Flexisaf Edusoft Limited in 2022(Strike period), Through Udemy, Kaggle, DataCamp and Youtube I have obtained a
+                          strong foundation. I leverage my proficiency in Python programming,
+                          utilizing libraries such as Numpy, Pandas, OpenCV, Seaborn, Matplotlib and others.
+                          I have also obtained certificates from both Udemy and Kaggle,
+                          further validating my knowledge and expertise in these domains.
+                          I am now able to explore and analyze complex datasets, develop and deploy intelligent algorithms,
+                          and visualize and interpret results using various data manipulation and visualization tools.
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/ml.jpg" alt="">
+                    </div>                  
+                    <hr><br>                    
+                    <div class="flex justify-between"><!--Game-dev-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">Game-Development</h1>
+                        <p>
+                          I began my journey in game development back in 2019, collaborating with my junior brother.
+                          Together, we ventured into the world of creating games and exploring the vast possibilities
+                          within this realm.
+                          <br>
+                          To bring our game ideas to life, we utilized a range of game development platforms,
+                          some are Unity, GDevelop, Scratch, Godot, and Buildbox. These versatile platforms allowed
+                          us to experiment with different game mechanics, design captivating levels, and implement
+                          engaging gameplay features.
+                          <br>
+                          One of our notable accomplishments in game development was the creation of a game called 
+                          "Agent Ban" using Scratch. This project showcased our creativity and programming skills, 
+                          as we crafted a unique and enjoyable gaming experience.
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/game.jpg" alt="">
+                    </div>                  
+                    <hr><br>
+                    <div class="flex justify-between"><!--Embedded system-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">Embedded-System</h1>
+                        <p>
+                          After Python, Machine-learning and Computer Vision era i came across embedded systems,
+                          devices like the Raspberry-Pi 3, Pi 4, Arduino, Esp and much more which could be used
+                          in home automation, Security, Telecommunication, Entertainment etc. The main goal at 
+                          that point was to utilize my knowledge in programing to give the sytems functions and then use 
+                          my 3d Modelling capabilities to model functional parts for the devices                          
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/system.jpg" alt="">
+                    </div>                  
+                    <hr><br>
+                    <div class="flex justify-between"><!--Prompt-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <span class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        <h1 class="font-bold text-lg">Prompt-Engineering</h1>
+                        <p>Ventured into Prompt Engineering "The best skill to learn in 2023" on June 2023. The Text and images contained 
+                          within this website where all written/created with Prompt-Engineering, It just makes everything easier 😎
+                          from <br>
+                          1.Debugging Code <br>
+                          2.Automation of repeated tasks <br>
+                          3.streamlined data processing <br>
+                          4.Improved Efficiency in prototyping <br>
+                          5.Enhansing Visualization Just a few out of a thousand
+                        </p>
+                      </span>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] py-9 px-10">
+                      <img class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain" src="img/prompt.jpg" alt="">
+                    </div>                  
+                    <hr><br> 
+                    <div class="flex justify-between"><!--Text-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        
+                        “Achievement happens when we pursue and attain what we want. Success comes when we are in clear pursuit of Why we want it.”
+                        <br><br> ~Simon Sinek
+                      </p>
+                    </div>
+                    <hr><br>
+                    <div class="flex justify-between"><!--Text-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                  
+                        "People will constantly attack you in life. One of their main weapons will be to instill in you doubts about yourself your worth, your abilities, your potential. They will often disguise this as their objective opinion, but invariably it has a political purpose they want to keep you down."
+                        <br><br> ~The 50th Law
+                      </p>
+                    </div>
+                    <hr><br>
+                    <div class="flex justify-between"><!--Text-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        "If you make you'r self more than just a man, if you devote yourself to an ideal if they cant stop you, then you become something else entirely, which is a legend"
+                        <br><br> ~Bruce Wayne
+                      </p>
+                    </div>
+                    <hr> <br>
+                    <div class="flex justify-between"><!--Text-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        "You don't become confident by shouting affirmations in the mirror, but by having a stack of undeniable proof that you are who you say you are."
+                  
+                        <br><br> ~Alex Hormozi 
+                      </p>
+                    </div>
+                    <hr><br>
+                    <div class="flex justify-between"><!--Text-->
+                      <div class="flex">
+                        <img class="w-[40px] h-[40px] rounded-full mr-3" src="img/pic.jpg" alt="">
+                        <div class="flex flex-col">
+                          <div class="flex">
+                            <h2 class="text-base">Ahmad Umaru Ba</h2>
+                            <p class="text-base ml-2 text-gray-500">
+                              <a href="main.html" class="text-gray-500">@ahmad_____ba</a>
+                            </p>
+                          </div>                          
+                        </div>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                      </svg>
+                    </div>
+                    <div class="max-w-[100%] max-h-[90%] px-10">
+                      <p class="rounded-[15px] max-h-[100%] max-w-[100%] object-contain p-2">
+                        "Trees dont hang around with grass even though they all started on the same level"
+                        <br><br> ~Unknown
+                      </p>
+                    </div>
+                    <hr>
+            </div>
+        </div>
+        <!-- search and stuff---------------------------------------------- -->
+        <div class="flex-col overflow-y-auto right space-y-6 hidden lg:inline-block md:w-[30%] px-3 border border-l-gray-100 h-screen">
+            <!-- search bar------------------------------------------------ -->
+            <div class="flex items-center">
+                <div class="relative mt-3">
+                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.25 3.5a5.75 5.75 0 110 11.5 5.75 5.75 0 010-11.5zm0 1a4.75 4.75 0 100 9.5 4.75 4.75 0 000-9.5z"/>
+                      <path d="M14.5 14.5l4.5 4.5"/>
+                    </svg>
+                  </div>
+                  <input type="text" placeholder="Search Twitter" class="w-[100%] pl-10 pr-4 py-2 text-sm text-gray-900 placeholder-gray-500 bg-gray-100 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+              </div>         
+            <!-- feed------------------------------------------------------ -->
+            <section class="bg-gray-100 flex flex-col rounded-[15px] p-4">
+                <h1 class="text-2xl font-bold">Skill-Set</h1>
+                <div class="flex flex-col">
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2016 - Till date</p>
+                      <h2 class="text-base font-bold">Front-End webDev</h2>
+                      <p class="text-xs text-gray-600">Cloned Twitter, Netflix, React</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">Python Programming</h2>
+                      <p class="text-xs text-gray-600">Projects: VirtualAssistant, ObjectDetection</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">SolidWorks</h2>
+                      <p class="text-xs text-gray-600">Projects: 3d-models NCAIR, Axial Flux Motor, Rover, Car parts</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>                  
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">AutoDesk Revit</h2>
+                      <p class="text-xs text-gray-600">Projects: Jahi plot,Estates, Duplex, CBN-Mega Carpark,</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">Machine-Learning</h2>
+                      <p class="text-xs text-gray-600">Projects: VirtualAssistant</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">Data Science</h2>
+                      <p class="text-xs text-gray-600">Panda, Numpy</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">Computer-Vision</h2>
+                      <p class="text-xs text-gray-600">Projects: Movement detection, Door opener</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2019 - Till date</p>
+                      <h2 class="text-base font-bold">Game-Development</h2>
+                      <p class="text-xs text-gray-600">Scratch, Unity, GDevelop, Buildbox</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2020 - Till date</p>
+                      <h2 class="text-base font-bold">Networking</h2>
+                      <p class="text-xs text-gray-600">Cisco</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2023 - Till date</p>
+                      <h2 class="text-base font-bold">Copywriting</h2>
+                      <p class="text-xs text-gray-600">Email-Marketing, SMMA, Facebook-Ads</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2023 - Till date</p>
+                      <h2 class="text-base font-bold">Video- Editing</h2>
+                      <p class="text-xs text-gray-600">Short-Form content</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2023 - Till date</p>
+                      <h2 class="text-base font-bold">Prompt-Engineering</h2>
+                      <p class="text-xs text-gray-600">Chat-Gpt, Dall-E, Midjourney</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                  <article class="flex justify-between p-2 rounded-[15px] hover:bg-gray-200">
+                    <div class="flex flex-col">
+                      <p class="text-xs text-gray-500">2022 - Till date</p>
+                      <h2 class="text-base font-bold">Embedded Systems</h2>
+                      <p class="text-xs text-gray-600">Raspberry-Pi, Arduino</p>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                    </svg>
+                  </article>
+                </div>
+              </section>
+            </div>
+    </section>
+    
+        <ul class="flex justify-between w-[100%] fixed bottom-0 p-4 px-6 md:hidden bg-white">
+            <li class=>
+                <a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                  <path d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                  <path d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                </svg>
+            </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/ahmad_____ba/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <rect height="20" rx="5" ry="5" width="20" x="2" y="2" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg></a>
+                
+              </li>
+              <li>
+                <a href="https://web.facebook.com/ahmad.umaruba/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="main-grid-item-icon" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg></a>                
+              </li>
+              <li><a href="mailto:aumaruba306@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </a>
+            </li> 
+        </ul>
+    <div class="md:hidden fixed right-7 max-w-[60px] max-h-[60px] bg-blue-400 z-50 bottom-[70px] rounded-full hover:bg-blue-300">
+        <a href="#"><img src="img/tweet.png " class="" alt=""></a>
+    </div>
+</body>
+</html>
